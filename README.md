@@ -1,91 +1,99 @@
-# 🩸 Blood Bank Management System
+# 🩸 Blood Bank Management System – PHP Project
 
-The **Blood Bank Management System** is a web-based platform designed to facilitate efficient blood donation coordination between users, donors, and administrators. It allows users to act as donors by updating their status, streamlines blood request management, and provides a centralized dashboard for administrators.
+## 📁 Project Type
 
----
-
-## 📌 Project Overview
-
-This project is a **Blood Bank Management System** developed to automate and streamline blood donation services. It enables users to find donors, schedule blood requests, and allows registered users to switch to donor mode by updating their profile status.
-
-> 📍 Path to run the project:
-> `http://localhost/blood`
+**Web Application (PHP + MySQL)**
 
 ---
 
-## 🔹 Key Features
+## 💡 Project Description
 
-* 🧑‍💻 **Update Profile** – Users can update personal details and choose to act as a donor
-* 🩸 **Donor Mode Switching** – Users can become donors by enabling donor status in their profile
-* 🗓️ **Request Scheduling** – Users can request blood donations by selecting a date, time, and location
-* 🧭 **Find Donor** – Search and filter available donors based on area and blood type
-* 📋 **Check Request Status** – Track the status of donation requests in real time
-* 🧾 **Admin Panel** – Admins manage users and monitor the system
+The **Blood Bank Management System** is a PHP-based web application designed to efficiently manage and coordinate blood donations. It supports three roles: **Admin**, **User**, and **Donor** (Users who choose to donate). The system allows users to update their profiles, become donors, submit blood requests, and track status — all while providing administrators with full oversight of the platform.
 
 ---
 
-## 🚀 System Modules
-
-| Module             | Description                                                             |
-| ------------------ | ----------------------------------------------------------------------- |
-| **Authentication** | Secure login and registration system for users, donors, and admins      |
-| **User Module**    | Update profile, become a donor, request blood, and check request status |
-| **Donor Module**   | Manage donation requests and update donor availability and profile      |
-| **Admin Module**   | Manage all users and system operations, and update admin details        |
-
----
-
-## 🏛 System Architecture
+## 🔧 Technologies Used
 
 * **Frontend**: HTML, CSS, JavaScript
 * **Backend**: PHP (Object-Oriented)
-* **Database**: MySQL (Relational Database Model)
-* **Security**: Role-Based Access Control (RBAC)
+* **Database**: MySQL
+* **Web Server**: Apache (via XAMPP)
+* **Security**: Session-based login and Role-Based Access Control (RBAC)
 
 ---
 
-## 🛠 Database Setup
-
-❗ **Important:**
-🔴 The database file `blood.sql` is included inside the `.zip` project folder.
-
-➡️ Just extract the `.zip`, open **phpMyAdmin**, and **import `blood.sql`** into a new database named `blood_db`.
-
----
-
-## ▶️ Running the Project
-
-* Start a local server using **XAMPP** or **WAMP**
-* Open your browser and go to:
-
-```
-http://localhost/blood
-```
-
----
-
-## 👥 User Roles & Functions
+## 👥 Roles & Modules
 
 ### 👤 User
 
-* **Update Profile** – Update your personal information and enable donor mode
-* **Find Donor** – Search for available blood donors in your area
-* **Check Request** – Monitor the status of your blood donation requests
+* Register and log i
+* Request blood by selecting **date**, **time**, and **location**
+* Search for available donors in their area
+* Check the status of their blood donation requests
 
-### 🩸 Donor
+### 🩸 Donor (via User)
+* Update personal profile and choose to become a **donor**
+* Users can act as donors by updating their status in their profile
+* View and manage incoming donation requests
+* Edit donor availability and personal details
 
-* **Manage Requests** – View and respond to blood donation requests
-* **Donor Profile** – Edit your availability and donor status
+### 🛡 Admin
 
-### 🛡️ Admin
-
-* **User Management** – Manage all registered users
-* **Admin Profile** – View and update your profile details
+* Secure login with admin credentials
+* View, update, and delete any user
+* Track and monitor all blood requests
+* Edit admin profile details
 
 ---
 
-## ✅ Conclusion
+## 📦 Database Overview (`blood.sql`)
 
-The Blood Bank Management System offers a reliable and user-friendly platform for managing and coordinating blood donations. With smart features like donor switching, automated request tracking, and role-based access, the system helps save lives by making blood donation more organized and accessible.
+The system uses a MySQL database named `blood_db` which includes the following main tables:
+
+| Table Name | Purpose                                                            |
+| ---------- | ------------------------------------------------------------------ |
+| `user`     | Stores user accounts, profile info, find donor by status               |
+| `request`  | Logs blood donation requests with time, date, location, and update status |
+| `admin`    | Stores admin login credentials and admin profile info              |
+
+> 🔴 The `blood.sql` file is located inside the project `.zip`. Import it using phpMyAdmin.
+
+---
+
+## ▶️ How to Run the Project
+
+1. **Extract the `.zip` file**
+   📁 Place the extracted project folder inside:
+
+   ```
+   C:\xampp\htdocs
+   ```
+
+2. **Set up the Database**
+
+   * Open **phpMyAdmin**:
+     `http://localhost/phpmyadmin`
+   * Create a new database named:
+     `blood_db`
+   * Import the file `blood.sql` included in the zip
+
+3. **Start Your Local Server**
+
+   * Open **XAMPP Control Panel**
+   * Start **Apache** and **MySQL**
+
+4. **Access the Application**
+
+   * Open your browser and navigate to:
+
+     ```
+     http://localhost/blood
+     ```
+
+---
+
+## ✅ Summary
+
+The Blood Bank Management System enables real-time coordination between users and donors, along with admin control for overseeing blood requests. This system provides a reliable digital platform for organizing donation efforts in hospitals, clinics, and communities.
 
 
