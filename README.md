@@ -50,11 +50,12 @@ The **Blood Bank Management System** is a PHP-based web application designed to 
 
 The system uses a MySQL database named `blood_db` which includes the following main tables:
 
-| Table Name | Purpose                                                            |
-| ---------- | ------------------------------------------------------------------ |
-| `user`     | Stores user accounts, profile info, find donor by status               |
-| `request`  | Logs blood donation requests with time, date, location, and update status |
-| `admin`    | Stores admin login credentials and admin profile info              |
+| **Table Name** | **Purpose**                                                                                                                                                                                                                                 |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `user`         | Stores user information, including personal details and donor status. Users can also make blood requests. <br>**Columns:** `user_id`, `name`, `phone_number`, `blood_group`, `age`, `gender`, `hospital_name`, `active_status`, `requested` |
+| `requests`     | Logs all blood donation requests, including the requesting user, assigned donor, and request details. <br>**Columns:** `request_id`, `user_id`, `donor_id`, `time`, `date`, `location`, `status`                                            |
+| `admin`        | Stores admin login credentials and profile details. <br>**Columns:** `admin_id`, `name`, `password`, `email`                                                                                                                                |
+
 
 > 🔴 The `blood.sql` file is located inside the project `.zip`. Import it using phpMyAdmin.
 
